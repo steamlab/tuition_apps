@@ -1,4 +1,4 @@
-package com.tuition_apps;
+package com.steamlab.course;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "tuition_apps";
+        return "steamlab";
     }
 }
