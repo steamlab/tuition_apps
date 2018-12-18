@@ -7,11 +7,25 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, Dimensions} from 'react-native';
 import AppScreen from './src/screen/StackNavigatorMain';
 import { savePushToken } from './src/lib/localDB';
 import OneSignal from 'react-native-onesignal';
 import { PermissionsAndroid } from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet';
+const entireScreenWidth = Dimensions.get('window').width;
+
+EStyleSheet.build({
+    $screenBackground: '#F3F3F3',
+    $primaryBlue: '#0a4096',
+    $white: '#ffffff',
+    $lineColor: '#c1c1c1',
+    $iconBackground: '#f2c4d9',
+    $rem: entireScreenWidth / 380,
+})
+
+
+
 
 async function requestPermission() {
   if (Platform.OS === 'android') {  

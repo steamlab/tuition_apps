@@ -6,6 +6,7 @@ import DrawerScreen from '../DrawerMenu';
 import ForgotPasswordScreen from '../ForgotPassword';
 import NavigationService from '../NavigationService';
 import { HeaderBackButton } from 'react-navigation';
+import StudentAttendance from '../StudentAttendance';
 
 class StackFile extends Component{
     render(){
@@ -48,8 +49,16 @@ const Stack = StackNavigator({
         navigationOptions:{
             header:null
         }
+    },
+    StudentAttendance: {
+        screen: StudentAttendance,
+        navigationOptions: {
+            header: null
+        }
+        
     }
 },{
+    initialRouteName: 'StudentAttendance'
 })
 
 export default StackFile;
