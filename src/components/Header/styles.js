@@ -12,6 +12,8 @@ export default EStyleSheet.create({
     headerContainer: {
         flex: 1,
         flexDirection: 'row',
+        alignItems: 'center',
+        paddingHorizontal : '10rem'
     },
     left: {
         flex: 0.5,
@@ -26,7 +28,23 @@ export default EStyleSheet.create({
     },
     headerText: {
         fontSize: '18rem',
+        color: '$white'
+    },
+    text:{
         color: '$white',
         fontWeight: 'bold'
+    },
+    lf: {
+        flex: 0.5,
+        justifyContent: 'flex-start'
+    },
+    mid: {
+        flex: 2,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    rg: {
+        flex: 0.5,
+        alignContent: 'flex-end'
     }
 })

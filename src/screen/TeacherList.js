@@ -2,7 +2,7 @@ import React from 'react';
 import { FlatList } from 'react-native';
 
 import { Container } from '../components/Container'
-import { Header } from '../components/Header'
+import { HeaderWithBack } from '../components/Header'
 import { DropdownWithLabel } from '../components/Dropdown'
 import { ListItem } from '../components/ListItem'
 
@@ -66,7 +66,7 @@ export default class TeacherList extends React.Component{
     render(){
         return(
             <Container>
-                <Header pageTitle='Teacher List' />
+                <HeaderWithBack pageTitle='Teacher List' />
                 <DropdownWithLabel labelText='Sort By :' data={grades} passChangeText={text => this.handleChangedText(text)} />
                 <FlatList data={this.state.teacherArr} 
                     renderItem={this._renderItem}

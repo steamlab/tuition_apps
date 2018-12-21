@@ -7,13 +7,14 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, Dimensions} from 'react-native';
+import {Platform,  Text, View, Dimensions} from 'react-native';
 import AppScreen from './src/screen/StackNavigatorMain';
 import { savePushToken } from './src/lib/localDB';
 import OneSignal from 'react-native-onesignal';
 import { PermissionsAndroid } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 const entireScreenWidth = Dimensions.get('window').width;
+
 
 EStyleSheet.build({
     $screenBackground: '#F3F3F3',
@@ -44,6 +45,7 @@ async function requestPermission() {
   }
 }
 
+
 export default class App extends Component {
   
   componentWillMount() {
@@ -71,7 +73,7 @@ export default class App extends Component {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',

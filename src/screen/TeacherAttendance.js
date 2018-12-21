@@ -1,7 +1,7 @@
 import React from 'react';
 //self-made components
 import { Container } from '../components/Container'
-import { Header } from '../components/Header'
+import { HeaderWithBack } from '../components/Header'
 import { Row } from '../components/Row'
 import { DatePickerWithLabel } from '../components/DatePicker'
 import { TextInputWithLabel } from '../components/TextInput'
@@ -34,6 +34,8 @@ const studentData = [{
     isAttend: true
 }]
 
+const tableHeader = ['Class Category','Sessions','Attendance']
+
 export default class TeacherAttendance extends React.Component{ 
     constructor(props){
         super(props);
@@ -60,14 +62,14 @@ export default class TeacherAttendance extends React.Component{
     render(){
         return(
             <Container>
-                <Header pageTitle='Attendance List' />
+                <HeaderWithBack pageTitle='Attendance List' />
                 <DatePickerWithLabel handleChangeSDate={sDate => this.setState({startDate:new Date(sDate)})} handleChangeEDate={eDate => this.setState({endDate:new Date(eDate)})} startDate={this.state.startDate} endDate={this.state.endDate}/>
                 <TextInputWithLabel inputLabel='Student Name' inputPlaceholder='Enter Student Name' passText={text => this.setState({search: text})}/>
                 <Row>
                     <ButtonRoundCorner buttonText='Search' onPressButton={event => this.handleSearch(event)}/>
                 </Row>
                 <Row>
-                    <Table tableData={this.state.show} />
+                    <Table tableHeader={tableHeader} tableData={this.state.show} />
                 </Row>
             </Container>
         )

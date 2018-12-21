@@ -2,7 +2,7 @@ import React from 'react';
 import { FlatList } from 'react-native';
 //self-made components
 import { Container } from '../components/Container'
-import { Header } from '../components/Header'
+import { HeaderWithBack } from '../components/Header'
 import { Row } from '../components/Row'
 import { ListItem } from '../components/ListItem'
 import { DropdownWithLabel } from '../components/Dropdown'
@@ -104,7 +104,7 @@ export default class StudentAttendance extends React.Component{
     render(){
         return(
             <Container>
-                <Header pageTitle='Attendance List' />
+                <HeaderWithBack pageTitle='Attendance List' />
                 <DropdownWithLabel labelText='Date' data={dateList} passChangeText={text => this.setState({dateSearch:text})}/>
                 <DropdownWithLabel labelText='Class Category' data={classList} passChangeText={text => this.setState({classSearch:text})}/>
                 <DropdownWithLabel labelText='Session' data={sessionList} passChangeText={text => this.setState({sessionSearch:text})}/>

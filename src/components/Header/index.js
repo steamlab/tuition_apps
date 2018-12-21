@@ -1,4 +1,5 @@
-import Header from './Header';
+import HeaderWithBack from './HeaderWithBack';
+import HeaderThreeSection from './HeaderThreeSection';
 import styles from './styles';
 
-export { Header, styles };
+export { HeaderWithBack, styles, HeaderThreeSection };

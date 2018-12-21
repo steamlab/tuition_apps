@@ -24,5 +24,22 @@ export default EStyleSheet.create({
     title: {
         fontWeight: 'bold',
         fontSize: 18
+    },
+    notifItem: {
+        flex: 1,
+        padding: '10rem',
+        borderBottomWidth: '1rem',
+        borderBottomColor: '$lineColor',
+        marginHorizontal: '8rem',
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    notifCategory: {
+        fontSize: '16rem',
+        fontWeight: 'bold',
+        color: '$primaryBlue'
+    },
+    iconNotif: {
+        marginRight: '5rem'
     }
 })
